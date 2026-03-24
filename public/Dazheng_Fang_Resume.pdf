@@ -1,0 +1,72 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1266 >>
+stream
+BT
+/F1 12 Tf
+72 760 Td (Dazheng Ted Fang) Tj
+0 0 Td
+72 742 Td (Engineer working across robotics, software, and applied AI) Tj
+0 0 Td
+72 724 Td () Tj
+0 0 Td
+72 710 Td (Education) Tj
+0 0 Td
+72 692 Td (Vanderbilt University - M.S. in Computer Science) Tj
+0 0 Td
+72 674 Td (Southeast University - B.Eng. in Computer Science \(AI track\)) Tj
+0 0 Td
+72 656 Td () Tj
+0 0 Td
+72 642 Td (Experience) Tj
+0 0 Td
+72 624 Td (Ted Tech LLC - Full-Stack Engineer \(Jan 2025 - Present\)) Tj
+0 0 Td
+72 606 Td (Built and shipped production software for e-commerce and appointment workflows.) Tj
+0 0 Td
+72 588 Td (Designed backend and data workflows for reservations, inventory, and payments.) Tj
+0 0 Td
+72 570 Td () Tj
+0 0 Td
+72 556 Td (SYH Technology Co., Ltd. - Cofounder & Software/Systems Engineer \(Jul 2022 - Dec 2022\)) Tj
+0 0 Td
+72 538 Td (Led software development for the Hex-Core-MK1 omnidirectional treadmill prototype.) Tj
+0 0 Td
+72 520 Td (Integrated motion tracking, localization, and locomotion-aware control modules.) Tj
+0 0 Td
+72 502 Td () Tj
+0 0 Td
+72 488 Td (Skills) Tj
+0 0 Td
+72 470 Td (Python, TypeScript/JavaScript, C++, SQL, ROS2, Computer Vision, Unity, Next.js,) Tj
+0 0 Td
+72 452 Td (Node.js, PostgreSQL, RAG, LLM Applications, Retrieval Pipelines) Tj
+0 0 Td
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1629
+%%EOF

@@ -5,23 +5,25 @@ import { FadeIn } from "@/components/fade-in";
 import { ProjectCard } from "@/components/project-card";
 import { SectionHeader } from "@/components/section-header";
 import { TagPill } from "@/components/tag-pill";
-import {
-  assistantQuestions,
-  experience,
-  featuredProjects,
-  heroStats,
-  research,
-  site,
-  workingPrinciples,
-} from "@/content/portfolio";
+import { getPortfolioContent } from "@/content/site-content";
 
-export default function Home() {
+export default function HomeZhPage() {
+  const {
+    assistantQuestions,
+    experience,
+    featuredProjects,
+    heroStats,
+    research,
+    site,
+    ui,
+    workingPrinciples,
+  } = getPortfolioContent("zh");
   const [treadmillPublication, vanderbiltPublication] = research.publications;
 
   return (
     <div className="relative pb-20 lg:h-[calc(100dvh-5rem)] lg:snap-y lg:snap-mandatory lg:overflow-y-auto lg:pb-0">
       <div className="pointer-events-none fixed right-6 bottom-6 z-20 hidden rounded-full border border-line bg-white/90 px-4 py-2 text-xs uppercase tracking-[0.22em] text-muted shadow-[0_20px_40px_-30px_rgba(200,93,134,0.35)] lg:block">
-        Scroll
+        {ui.labels.scroll}
       </div>
       <section className="mx-auto flex w-full max-w-6xl items-start px-6 py-10 lg:h-[calc(100dvh-5rem)] lg:snap-start lg:py-14 lg:px-8">
         <div className="w-full space-y-8">
@@ -30,11 +32,11 @@ export default function Home() {
               <div className="space-y-5">
                 <div className="space-y-3">
                   <p className="text-sm font-medium uppercase tracking-[0.24em] text-accent">
-                    Robotics, real-time systems, applied AI
+                    机器人、实时系统、应用型 AI
                   </p>
                   <div className="space-y-2">
                     <p className="text-balance text-3xl font-semibold tracking-tight text-accent-strong sm:text-4xl lg:text-[2.95rem]">
-                      Dazheng Ted Fang
+                      方大政
                     </p>
                     <span className="block h-px w-24 bg-line" />
                   </div>
@@ -48,16 +50,16 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-wrap gap-2 pt-1">
-                  <TagPill>Robotics</TagPill>
-                  <TagPill>Real-Time Systems</TagPill>
-                  <TagPill>Applied AI</TagPill>
-                  <TagPill>Production Software</TagPill>
+                  <TagPill>机器人</TagPill>
+                  <TagPill>实时系统</TagPill>
+                  <TagPill>应用型 AI</TagPill>
+                  <TagPill>生产软件</TagPill>
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">
-                <ButtonLink href="/projects">View Projects</ButtonLink>
-                <ButtonLink href="/resume" variant="secondary">
-                  Resume
+                <ButtonLink href="/zh/projects">{ui.buttons.viewProjects}</ButtonLink>
+                <ButtonLink href="/zh/resume" variant="secondary">
+                  {ui.buttons.resume}
                 </ButtonLink>
               </div>
               <div className="grid gap-4 border-t border-line pt-6 sm:grid-cols-2 xl:grid-cols-4">
@@ -77,21 +79,14 @@ export default function Home() {
                 <div className="rounded-[1.5rem] border border-line bg-soft p-4.5">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
-                      Focus
+                      {ui.labels.focusBlock}
                     </p>
                     <span className="rounded-full border border-line bg-white px-3 py-1 text-xs text-muted">
-                      Cross-disciplinary
+                      跨学科
                     </span>
                   </div>
                   <div className="mt-4 grid grid-cols-2 gap-3">
-                    {[
-                      "Robotics",
-                      "Real-Time Systems",
-                      "Applied AI",
-                      "Production Software",
-                      "ROS2",
-                      "Full-Stack",
-                    ].map((tag) => (
+                    {["机器人", "实时系统", "应用型 AI", "生产软件", "ROS2", "全栈"].map((tag) => (
                       <div
                         key={tag}
                         className="rounded-2xl border border-line bg-white px-4 py-4 text-sm font-medium text-foreground"
@@ -102,19 +97,16 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-5 rounded-[1.5rem] bg-tint p-4.5">
-                  <p className="text-sm text-muted">Core approach</p>
+                  <p className="text-sm text-muted">{ui.labels.coreApproach}</p>
                   <p className="mt-2 text-lg font-medium leading-8 text-foreground">
-                    Systems thinking, product sense, and end-to-end execution.
+                    系统思维、产品判断，以及端到端执行。
                   </p>
                 </div>
                 <div className="mt-5 rounded-[1.5rem] border border-line bg-white p-4.5">
-                  <p className="text-sm text-muted">What I optimize for</p>
+                  <p className="text-sm text-muted">{ui.labels.optimizeFor}</p>
                   <div className="mt-3.5 space-y-2.5">
                     {workingPrinciples.map((principle) => (
-                      <div
-                        key={principle}
-                        className="flex gap-3 text-sm leading-7 text-foreground"
-                      >
+                      <div key={principle} className="flex gap-3 text-sm leading-7 text-foreground">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
                         <span>{principle}</span>
                       </div>
@@ -127,18 +119,16 @@ export default function Home() {
 
           <FadeIn className="grid gap-6 rounded-[2.2rem] border border-line bg-soft px-6 py-7 sm:px-8 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
             <SectionHeader
-              eyebrow="About"
-              title="I like building complete systems that have to work in the real world."
-              description="My work sits at the intersection of software, embodied interaction, and applied AI. I care about execution, technical depth, clarity of experience, and making ambitious systems usable."
+              eyebrow="关于我"
+              title="我喜欢做那些必须在真实世界里可靠运行的完整系统。"
+              description="我的工作位于软件、具身交互与应用型 AI 的交叉点。我在意执行质量、技术深度、体验清晰度，以及如何把有挑战性的系统做得真正可用。"
             />
             <div className="rounded-[1.5rem] border border-line bg-white p-5">
               <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
-                Through-line
+                {ui.labels.throughLine}
               </p>
               <p className="mt-3 text-base leading-7 text-muted">
-                From immersive locomotion platforms to business operations
-                software to knowledge assistants, the common thread is building
-                systems that are technically deep and genuinely useful.
+                从沉浸式运动平台，到业务运营软件，再到知识助手，这些工作的共同主线都是把技术深度转化为真正可用的系统。
               </p>
             </div>
           </FadeIn>
@@ -149,15 +139,15 @@ export default function Home() {
         <div className="w-full">
           <FadeIn>
             <SectionHeader
-              eyebrow="Selected Work"
-              title="Featured projects"
-              description="A few projects that best represent how I work across robotics, production systems, and AI-enabled product engineering."
+              eyebrow="代表项目"
+              title="精选项目"
+              description="几项最能代表我如何在机器人、生产系统与 AI 产品工程之间展开工作的项目。"
             />
           </FadeIn>
           <div className="mt-8 grid gap-5 lg:grid-cols-2">
             {featuredProjects.map((project, index) => (
               <FadeIn key={project.slug} delay={index * 0.06}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} locale="zh" />
               </FadeIn>
             ))}
           </div>
@@ -168,9 +158,9 @@ export default function Home() {
         <div className="w-full">
           <FadeIn>
             <SectionHeader
-              eyebrow="Experience"
-              title="A concise view of the roles behind the work"
-              description="I enjoy work that combines technical depth, product thinking, and responsibility for execution."
+              eyebrow="经历"
+              title="这些工作的角色与背景"
+              description="我更偏好那些同时要求技术深度、产品思维与执行责任感的工作。"
             />
           </FadeIn>
           <div className="mt-8 grid gap-5">
@@ -187,15 +177,15 @@ export default function Home() {
         <div className="w-full">
           <FadeIn>
             <SectionHeader
-              eyebrow="Research & Recognition"
-              title="Technical credibility, kept intentionally lightweight"
-              description="Research and recognition that reflect a deeper interest in real-time interaction, robotics systems, and applied engineering."
+              eyebrow="研究与认可"
+              title="技术上的积累与认可，保持简洁但清楚"
+              description="这些论文与奖项反映了我对实时交互、机器人系统与技术驱动工程实践的持续兴趣。"
             />
           </FadeIn>
           <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
             <FadeIn>
               <article className="rounded-[2rem] border border-line bg-white p-6">
-                <p className="text-sm font-medium text-accent">Publication</p>
+                <p className="text-sm font-medium text-accent">{ui.labels.publication}</p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight text-foreground">
                   {treadmillPublication.title}
                 </h3>
@@ -209,13 +199,11 @@ export default function Home() {
             </FadeIn>
             <FadeIn delay={0.08}>
               <article className="rounded-[2rem] border border-line bg-white p-6">
-                <p className="text-sm font-medium text-accent">Awards</p>
+                <p className="text-sm font-medium text-accent">{ui.labels.awards}</p>
                 <div className="mt-4 space-y-4">
                   {research.awards.map((award) => (
                     <div key={award} className="rounded-2xl bg-soft px-4 py-4">
-                      <p className="text-base leading-7 text-foreground">
-                        {award}
-                      </p>
+                      <p className="text-base leading-7 text-foreground">{award}</p>
                     </div>
                   ))}
                 </div>
@@ -230,7 +218,7 @@ export default function Home() {
           <div className="mt-6">
             <FadeIn delay={0.12}>
               <article className="rounded-[2rem] border border-line bg-white p-6 lg:max-w-[58rem]">
-                <p className="text-sm font-medium text-accent">Publication</p>
+                <p className="text-sm font-medium text-accent">{ui.labels.publication}</p>
                 <h3 className="mt-4 text-2xl font-semibold tracking-tight text-foreground">
                   {vanderbiltPublication.title}
                 </h3>
@@ -250,14 +238,14 @@ export default function Home() {
         <div className="w-full">
           <FadeIn>
             <SectionHeader
-              eyebrow="Ask My Work"
-              title="A future interface for exploring projects, decisions, and technical work"
-              description="Designed as the next layer of the portfolio: a grounded assistant surface for navigating engineering context instead of only reading static pages."
+              eyebrow="问问我的工作"
+              title="一个未来可用于理解项目、决策与技术工作的界面"
+              description="它会成为这个网站的下一层，帮助访客借助 grounded assistant 更快理解我的项目、工程取舍与长期主线。"
             />
           </FadeIn>
           <div className="mt-8">
             <FadeIn>
-              <ChatPlaceholder questions={assistantQuestions} />
+              <ChatPlaceholder questions={assistantQuestions} locale="zh" />
             </FadeIn>
           </div>
         </div>
