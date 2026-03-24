@@ -35,7 +35,7 @@ export const site = {
   email: "dazh.fang@gmail.com",
   github: "https://github.com/TedFang-424/",
   linkedin: "https://www.linkedin.com/in/dazhengfang-b59026255/",
-  websiteUrl: "",
+  websiteUrl: "https://dazheng-fang.com",
   resumePdfHref: "/Dazheng_Ted_Fang_Resume.pdf",
   education: [
     "Vanderbilt University - M.S. in Computer Science",

@@ -23,6 +23,29 @@ export const metadata: Metadata = {
   description:
     "Portfolio website for Dazheng Ted Fang, an engineer building real systems across robotics, production software, and applied AI.",
   metadataBase: siteUrl ? new URL(siteUrl) : undefined,
+  keywords: [
+    "Dazheng Ted Fang",
+    "robotics engineer",
+    "applied AI engineer",
+    "real-time systems",
+    "ROS2",
+    "full-stack engineer",
+    "portfolio",
+    "engineering portfolio",
+  ],
+  authors: [{ name: site.name, url: siteUrl ?? undefined }],
+  creator: site.name,
+  publisher: site.name,
+  category: "technology",
+  alternates: {
+    canonical: siteUrl ?? "/",
+    languages: siteUrl
+      ? {
+          "en-US": siteUrl,
+          "zh-CN": `${siteUrl}/zh`,
+        }
+      : undefined,
+  },
   openGraph: {
     title: "Dazheng Ted Fang | Robotics, Systems, and Applied AI",
     description:
@@ -30,12 +53,30 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl ?? undefined,
     siteName: site.name,
+    locale: "en_US",
+    alternateLocale: ["zh_CN"],
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Dazheng Ted Fang portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Dazheng Ted Fang | Robotics, Systems, and Applied AI",
     description:
       "Engineer building real systems across robotics, software, and applied AI.",
+    images: ["/og-image.svg"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: ["/favicon.svg"],
   },
 };
 

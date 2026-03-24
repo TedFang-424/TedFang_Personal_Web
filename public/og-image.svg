@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.6"/>
+  <circle cx="1020" cy="80" r="260" fill="#FDEEF4"/>
+  <circle cx="180" cy="540" r="200" fill="#FFF6F9"/>
+  <rect x="86" y="72" width="120" height="120" rx="30" fill="#FFF6F9" stroke="#F1D9E2" stroke-width="3"/>
+  <path d="M118 100H143.4C160.4 100 171 109.7 171 124.8C171 140.1 160.1 149.8 143 149.8H132.5V161.5H118V100ZM142.3 137.8C151.1 137.8 156 133 156 125.2C156 117.4 151.1 112.6 142.3 112.6H132.5V137.8H142.3Z" fill="#1F1F1F"/>
+  <path d="M138 100H178V111.9H152.8V126.6H174.9V138.2H152.8V161.5H138V100Z" fill="#C85D86"/>
+  <text x="86" y="286" fill="#C85D86" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="6">DAZHENG TED FANG</text>
+  <text x="86" y="372" fill="#1F1F1F" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700">
+    <tspan x="86" dy="0">Robotics, Software,</tspan>
+    <tspan x="86" dy="78">and Applied AI.</tspan>
+  </text>
+  <text x="86" y="530" fill="#666666" font-family="Arial, Helvetica, sans-serif" font-size="28">
+    Real-time systems, production engineering, and grounded AI products.
+  </text>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" stroke="#F1D9E2"/>
+    </pattern>
+  </defs>
+</svg>
