@@ -76,51 +76,57 @@ export default function Home() {
 
             <FadeIn delay={0.1}>
               <div className="adaptive-stack space-y-5">
-                <div className="mx-auto w-full max-w-[17rem] sm:max-w-[19rem] md:ml-auto md:mr-0 lg:w-full lg:max-w-none">
-                  <div className="overflow-hidden rounded-[2rem] border border-line bg-soft shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
-                    <Image
-                      src={profileImage}
-                      alt="Portrait of Dazheng Ted Fang"
-                      className="aspect-square w-full object-cover object-center"
-                      priority
-                    />
+                <div className="grid gap-5 md:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] md:items-start lg:grid-cols-1">
+                  <div className="mx-auto w-full max-w-[16rem] md:mx-0 md:max-w-none">
+                    <div className="overflow-hidden rounded-[2rem] border border-line bg-soft shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
+                      <Image
+                        src={profileImage}
+                        alt="Portrait of Dazheng Ted Fang"
+                        className="aspect-square w-full object-cover object-center"
+                        priority
+                      />
+                    </div>
+                  </div>
+                  <div className="adaptive-stack space-y-5">
+                    <div className="adaptive-card rounded-[2.2rem] border border-line bg-white p-5 shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
+                      <div className="adaptive-card-sm rounded-[1.5rem] border border-line bg-soft p-4.5">
+                        <div className="flex items-center justify-between">
+                          <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
+                            Focus
+                          </p>
+                          <span className="rounded-full border border-line bg-white px-3 py-1 text-xs text-muted">
+                            Cross-disciplinary
+                          </span>
+                        </div>
+                        <div className="adaptive-dense-grid mt-4 flex flex-wrap gap-2.5">
+                          {[
+                            "Robotics",
+                            "Real-Time Systems",
+                            "Applied AI",
+                            "Production Software",
+                            "ROS2",
+                            "Full-Stack",
+                          ].map((tag) => (
+                            <span
+                              key={tag}
+                              className="rounded-full border border-line bg-white px-3 py-2 text-sm font-medium text-foreground"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] bg-tint p-4.5">
+                        <p className="text-sm text-muted">Core approach</p>
+                        <p className="mt-2 text-lg font-medium leading-8 text-foreground">
+                          Systems thinking, product sense, and end-to-end execution.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="adaptive-card rounded-[2.2rem] border border-line bg-white p-5 shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
-                  <div className="adaptive-card-sm rounded-[1.5rem] border border-line bg-soft p-4.5">
-                  <div className="flex items-center justify-between">
-                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
-                      Focus
-                    </p>
-                    <span className="rounded-full border border-line bg-white px-3 py-1 text-xs text-muted">
-                      Cross-disciplinary
-                    </span>
-                  </div>
-                  <div className="adaptive-dense-grid mt-4 flex flex-wrap gap-2.5">
-                    {[
-                      "Robotics",
-                      "Real-Time Systems",
-                      "Applied AI",
-                      "Production Software",
-                      "ROS2",
-                      "Full-Stack",
-                    ].map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-line bg-white px-3 py-2 text-sm font-medium text-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  </div>
-                  <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] bg-tint p-4.5">
-                    <p className="text-sm text-muted">Core approach</p>
-                    <p className="mt-2 text-lg font-medium leading-8 text-foreground">
-                      Systems thinking, product sense, and end-to-end execution.
-                    </p>
-                  </div>
-                  <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] border border-line bg-white p-4.5">
+                  <div className="adaptive-card-sm rounded-[1.5rem] border border-line bg-white p-4.5">
                     <p className="text-sm text-muted">What I optimize for</p>
                     <div className="adaptive-tight-mt mt-3.5 space-y-2.5">
                       {workingPrinciples.map((principle) => (
