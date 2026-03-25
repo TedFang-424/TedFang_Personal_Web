@@ -75,16 +75,19 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <div className="adaptive-card rounded-[2.2rem] border border-line bg-white p-5 shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
-                <div className="overflow-hidden rounded-[1.6rem] border border-line bg-soft">
-                  <Image
-                    src={profileImage}
-                    alt="Portrait of Dazheng Ted Fang"
-                    className="aspect-square w-full object-cover object-center"
-                    priority
-                  />
+              <div className="adaptive-stack space-y-5">
+                <div className="mx-auto w-full max-w-[17rem] sm:max-w-[19rem] md:ml-auto md:mr-0 lg:w-full lg:max-w-none">
+                  <div className="overflow-hidden rounded-[2rem] border border-line bg-soft shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
+                    <Image
+                      src={profileImage}
+                      alt="Portrait of Dazheng Ted Fang"
+                      className="aspect-square w-full object-cover object-center"
+                      priority
+                    />
+                  </div>
                 </div>
-                <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] border border-line bg-soft p-4.5">
+                <div className="adaptive-card rounded-[2.2rem] border border-line bg-white p-5 shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
+                  <div className="adaptive-card-sm rounded-[1.5rem] border border-line bg-soft p-4.5">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
                       Focus
@@ -110,25 +113,26 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                </div>
-                <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] bg-tint p-4.5">
-                  <p className="text-sm text-muted">Core approach</p>
-                  <p className="mt-2 text-lg font-medium leading-8 text-foreground">
-                    Systems thinking, product sense, and end-to-end execution.
-                  </p>
-                </div>
-                <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] border border-line bg-white p-4.5">
-                  <p className="text-sm text-muted">What I optimize for</p>
-                  <div className="adaptive-tight-mt mt-3.5 space-y-2.5">
-                    {workingPrinciples.map((principle) => (
-                      <div
-                        key={principle}
-                        className="flex gap-3 text-sm leading-6 text-foreground"
-                      >
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
-                        <span>{principle}</span>
-                      </div>
-                    ))}
+                  </div>
+                  <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] bg-tint p-4.5">
+                    <p className="text-sm text-muted">Core approach</p>
+                    <p className="mt-2 text-lg font-medium leading-8 text-foreground">
+                      Systems thinking, product sense, and end-to-end execution.
+                    </p>
+                  </div>
+                  <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-[1.5rem] border border-line bg-white p-4.5">
+                    <p className="text-sm text-muted">What I optimize for</p>
+                    <div className="adaptive-tight-mt mt-3.5 space-y-2.5">
+                      {workingPrinciples.map((principle) => (
+                        <div
+                          key={principle}
+                          className="flex gap-3 text-sm leading-6 text-foreground"
+                        >
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                          <span>{principle}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
