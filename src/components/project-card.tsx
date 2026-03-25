@@ -16,9 +16,9 @@ export function ProjectCard({ project, locale = "en" }: ProjectCardProps) {
   return (
     <Link
       href={withLocalePath(`/projects/${project.slug}`, locale)}
-      className="group flex h-full flex-col justify-between rounded-[2rem] border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/45 hover:shadow-[0_28px_70px_-45px_rgba(200,93,134,0.45)]"
+      className="adaptive-card group flex h-full flex-col justify-between rounded-[2rem] border border-line bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/45 hover:shadow-[0_28px_70px_-45px_rgba(200,93,134,0.45)]"
     >
-      <div className="space-y-5">
+      <div className="adaptive-stack space-y-5">
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-2">
             <p className="text-sm font-medium text-accent">{project.category}</p>
@@ -31,7 +31,7 @@ export function ProjectCard({ project, locale = "en" }: ProjectCardProps) {
           </span>
         </div>
         <p className="text-base leading-7 text-muted">{project.shortSummary}</p>
-        <div className="grid gap-3 rounded-[1.4rem] bg-soft p-4 text-sm text-muted sm:grid-cols-2">
+        <div className="adaptive-card-sm adaptive-dense-grid grid gap-3 rounded-[1.4rem] bg-soft p-4 text-sm text-muted sm:grid-cols-2">
           <div>
             <p className="text-xs uppercase tracking-[0.18em] text-accent">{ui.labels.role}</p>
             <p className="mt-2 text-sm text-foreground">{project.role}</p>
@@ -52,7 +52,7 @@ export function ProjectCard({ project, locale = "en" }: ProjectCardProps) {
           </div>
         </div>
       </div>
-      <div className="mt-8 flex flex-wrap gap-2">
+      <div className="adaptive-tight-mt mt-8 flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <TagPill key={tag}>{tag}</TagPill>
         ))}

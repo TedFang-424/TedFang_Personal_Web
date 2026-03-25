@@ -12,9 +12,9 @@ export function ChatPlaceholder({ questions, locale = "en" }: ChatPlaceholderPro
   const { ui } = getPortfolioContent(locale);
 
   return (
-    <div className="rounded-[2rem] border border-line bg-white p-6 shadow-[0_24px_80px_-60px_rgba(200,93,134,0.45)] sm:p-8">
-      <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-        <div className="rounded-[1.4rem] border border-dashed border-line bg-soft p-5">
+    <div className="adaptive-card rounded-[2rem] border border-line bg-white p-6 shadow-[0_24px_80px_-60px_rgba(200,93,134,0.45)] sm:p-8">
+      <div className="adaptive-dense-grid grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="adaptive-card-sm rounded-[1.4rem] border border-dashed border-line bg-soft p-5">
           <div className="space-y-3">
             <p className="text-sm font-medium uppercase tracking-[0.24em] text-accent">
               {ui.labels.preview}
@@ -28,7 +28,7 @@ export function ChatPlaceholder({ questions, locale = "en" }: ChatPlaceholderPro
                 : "Explore projects, technical decisions, and engineering experience through a future interactive assistant. The full assistant is coming soon, but the product surface is already designed with grounded retrieval in mind."}
             </p>
           </div>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="adaptive-tight-mt mt-6 flex flex-wrap gap-3">
             <ButtonLink href={withLocalePath("/ask-my-work", locale)}>
               {ui.buttons.exploreAssistant}
             </ButtonLink>
@@ -37,14 +37,14 @@ export function ChatPlaceholder({ questions, locale = "en" }: ChatPlaceholderPro
             </ButtonLink>
           </div>
         </div>
-        <div className="rounded-[1.4rem] border border-line bg-white p-5">
+        <div className="adaptive-card-sm rounded-[1.4rem] border border-line bg-white p-5">
           <div className="flex items-center justify-between">
             <p className="text-sm text-muted">{ui.labels.suggestedQuestions}</p>
             <span className="rounded-full bg-soft px-3 py-1 text-xs text-accent">
               {ui.labels.comingSoon}
             </span>
           </div>
-          <div className="mt-4 space-y-3">
+          <div className="adaptive-tight-mt mt-4 space-y-3">
             {questions.map((question) => (
               <div
                 key={question}
@@ -54,7 +54,7 @@ export function ChatPlaceholder({ questions, locale = "en" }: ChatPlaceholderPro
               </div>
             ))}
           </div>
-          <div className="mt-5 rounded-2xl border border-line bg-soft p-4">
+          <div className="adaptive-card-sm adaptive-tight-mt mt-5 rounded-2xl border border-line bg-soft p-4">
             <p className="text-sm leading-7 text-muted">
               {locale === "zh"
                 ? "计划方向包括：带引用的回答、项目感知检索，以及一种比静态作品集更清晰的技术工作探索方式。"

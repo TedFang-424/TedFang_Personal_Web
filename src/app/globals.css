@@ -83,4 +83,89 @@ a {
   .text-pretty {
     text-wrap: pretty;
   }
+
+  .adaptive-home {
+    --home-panel-y: 3rem;
+    --home-panel-gap: 2rem;
+    --home-card-pad: 1.5rem;
+    --home-card-pad-sm: 1.125rem;
+    --home-title-size: 4.25rem;
+    --home-title-leading: 1.01;
+    --home-name-size: 2.95rem;
+    --home-body-size: 1.125rem;
+    --home-body-leading: 1.75rem;
+  }
+
+  .adaptive-home .adaptive-panel {
+    padding-top: var(--home-panel-y);
+    padding-bottom: var(--home-panel-y);
+  }
+
+  .adaptive-home .adaptive-main-grid {
+    gap: var(--home-panel-gap);
+  }
+
+  .adaptive-home .adaptive-stack {
+    gap: var(--home-panel-gap);
+  }
+
+  .adaptive-home .adaptive-card {
+    padding: var(--home-card-pad);
+  }
+
+  .adaptive-home .adaptive-card-sm {
+    padding: var(--home-card-pad-sm);
+  }
+
+  .adaptive-home .adaptive-name {
+    font-size: var(--home-name-size);
+  }
+
+  .adaptive-home .adaptive-title {
+    font-size: var(--home-title-size);
+    line-height: var(--home-title-leading);
+  }
+
+  .adaptive-home .adaptive-body {
+    font-size: var(--home-body-size);
+    line-height: var(--home-body-leading);
+  }
+
+  @media (min-width: 1280px) and (max-height: 920px) {
+    .adaptive-home {
+      --home-panel-y: 2.25rem;
+      --home-panel-gap: 1.5rem;
+      --home-card-pad: 1.25rem;
+      --home-card-pad-sm: 1rem;
+      --home-title-size: clamp(3.35rem, 4.45vw, 3.95rem);
+      --home-name-size: clamp(2.3rem, 2.8vw, 2.7rem);
+      --home-body-size: 1rem;
+      --home-body-leading: 1.625rem;
+    }
+  }
+
+  @media (min-width: 1280px) and (max-height: 820px) {
+    .adaptive-home {
+      --home-panel-y: 1.75rem;
+      --home-panel-gap: 1.1rem;
+      --home-card-pad: 1rem;
+      --home-card-pad-sm: 0.875rem;
+      --home-title-size: clamp(2.9rem, 4vw, 3.35rem);
+      --home-name-size: clamp(2rem, 2.45vw, 2.35rem);
+      --home-body-size: 0.95rem;
+      --home-body-leading: 1.5rem;
+    }
+
+    .adaptive-home .adaptive-dense-grid {
+      gap: 0.75rem;
+    }
+
+    .adaptive-home .adaptive-tight-mt {
+      margin-top: 0.75rem;
+    }
+
+    .adaptive-home .adaptive-tight-pt {
+      padding-top: 0.875rem;
+    }
+  }
 }
