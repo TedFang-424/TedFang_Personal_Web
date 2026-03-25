@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/button-link";
 import { ChatPlaceholder } from "@/components/chat-placeholder";
 import { ExperienceCard } from "@/components/experience-card";
@@ -6,6 +7,7 @@ import { ProjectCard } from "@/components/project-card";
 import { SectionHeader } from "@/components/section-header";
 import { TagPill } from "@/components/tag-pill";
 import { getPortfolioContent } from "@/content/site-content";
+import profileImage from "../../../me.png";
 
 export default function HomeZhPage() {
   const {
@@ -76,7 +78,15 @@ export default function HomeZhPage() {
 
             <FadeIn delay={0.1}>
               <div className="rounded-[2.2rem] border border-line bg-white p-5 shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
-                <div className="rounded-[1.5rem] border border-line bg-soft p-4.5">
+                <div className="overflow-hidden rounded-[1.6rem] border border-line bg-soft">
+                  <Image
+                    src={profileImage}
+                    alt="方大政的头像"
+                    className="aspect-square w-full object-cover object-center"
+                    priority
+                  />
+                </div>
+                <div className="mt-5 rounded-[1.5rem] border border-line bg-soft p-4.5">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
                       {ui.labels.focusBlock}
@@ -85,14 +95,14 @@ export default function HomeZhPage() {
                       跨学科
                     </span>
                   </div>
-                  <div className="mt-4 grid grid-cols-2 gap-3">
+                  <div className="mt-4 flex flex-wrap gap-2.5">
                     {["机器人", "实时系统", "应用型 AI", "生产软件", "ROS2", "全栈"].map((tag) => (
-                      <div
+                      <span
                         key={tag}
-                        className="rounded-2xl border border-line bg-white px-4 py-4 text-sm font-medium text-foreground"
+                        className="rounded-full border border-line bg-white px-3 py-2 text-sm font-medium text-foreground"
                       >
                         {tag}
-                      </div>
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -106,7 +116,7 @@ export default function HomeZhPage() {
                   <p className="text-sm text-muted">{ui.labels.optimizeFor}</p>
                   <div className="mt-3.5 space-y-2.5">
                     {workingPrinciples.map((principle) => (
-                      <div key={principle} className="flex gap-3 text-sm leading-7 text-foreground">
+                      <div key={principle} className="flex gap-3 text-sm leading-6 text-foreground">
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
                         <span>{principle}</span>
                       </div>

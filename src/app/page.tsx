@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ButtonLink } from "@/components/button-link";
 import { ChatPlaceholder } from "@/components/chat-placeholder";
 import { ExperienceCard } from "@/components/experience-card";
@@ -14,6 +15,7 @@ import {
   site,
   workingPrinciples,
 } from "@/content/portfolio";
+import profileImage from "../../me.png";
 
 export default function Home() {
   const [treadmillPublication, vanderbiltPublication] = research.publications;
@@ -74,7 +76,15 @@ export default function Home() {
 
             <FadeIn delay={0.1}>
               <div className="rounded-[2.2rem] border border-line bg-white p-5 shadow-[0_35px_90px_-70px_rgba(200,93,134,0.55)]">
-                <div className="rounded-[1.5rem] border border-line bg-soft p-4.5">
+                <div className="overflow-hidden rounded-[1.6rem] border border-line bg-soft">
+                  <Image
+                    src={profileImage}
+                    alt="Portrait of Dazheng Ted Fang"
+                    className="aspect-square w-full object-cover object-center"
+                    priority
+                  />
+                </div>
+                <div className="mt-5 rounded-[1.5rem] border border-line bg-soft p-4.5">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
                       Focus
@@ -83,7 +93,7 @@ export default function Home() {
                       Cross-disciplinary
                     </span>
                   </div>
-                  <div className="mt-4 grid grid-cols-2 gap-3">
+                  <div className="mt-4 flex flex-wrap gap-2.5">
                     {[
                       "Robotics",
                       "Real-Time Systems",
@@ -92,12 +102,12 @@ export default function Home() {
                       "ROS2",
                       "Full-Stack",
                     ].map((tag) => (
-                      <div
+                      <span
                         key={tag}
-                        className="rounded-2xl border border-line bg-white px-4 py-4 text-sm font-medium text-foreground"
+                        className="rounded-full border border-line bg-white px-3 py-2 text-sm font-medium text-foreground"
                       >
                         {tag}
-                      </div>
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -113,7 +123,7 @@ export default function Home() {
                     {workingPrinciples.map((principle) => (
                       <div
                         key={principle}
-                        className="flex gap-3 text-sm leading-7 text-foreground"
+                        className="flex gap-3 text-sm leading-6 text-foreground"
                       >
                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
                         <span>{principle}</span>
