@@ -23,11 +23,11 @@ export default function HomeZhPage() {
   const [treadmillPublication, vanderbiltPublication] = research.publications;
 
   return (
-    <div className="adaptive-home relative pb-20 xl:h-[calc(100dvh-5rem)] xl:snap-y xl:snap-mandatory xl:overflow-y-auto xl:pb-0">
-      <div className="pointer-events-none fixed right-6 bottom-6 z-20 hidden rounded-full border border-line bg-white/90 px-4 py-2 text-xs uppercase tracking-[0.22em] text-muted shadow-[0_20px_40px_-30px_rgba(200,93,134,0.35)] xl:block">
+    <div className="adaptive-home home-snap-shell relative pb-20">
+      <div className="home-snap-indicator pointer-events-none fixed right-6 bottom-6 z-20 rounded-full border border-line bg-white/90 px-4 py-2 text-xs uppercase tracking-[0.22em] text-muted shadow-[0_20px_40px_-30px_rgba(200,93,134,0.35)]">
         {ui.labels.scroll}
       </div>
-      <section className="adaptive-panel mx-auto flex w-full max-w-6xl items-start px-6 py-10 xl:h-[calc(100dvh-5rem)] xl:snap-start lg:px-8">
+      <section className="adaptive-panel home-snap-panel mx-auto flex w-full max-w-6xl items-start px-6 py-10 lg:px-8">
         <div className="adaptive-stack w-full space-y-8">
           <div className="adaptive-main-grid grid gap-8 lg:grid-cols-[minmax(0,1.02fr)_23rem] lg:gap-12">
             <FadeIn className="adaptive-stack space-y-7">
@@ -145,7 +145,7 @@ export default function HomeZhPage() {
         </div>
       </section>
 
-      <section className="adaptive-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 xl:h-[calc(100dvh-5rem)] xl:snap-start lg:px-8">
+      <section className="adaptive-panel home-snap-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 lg:px-8">
         <div className="w-full">
           <FadeIn>
             <SectionHeader
@@ -164,7 +164,7 @@ export default function HomeZhPage() {
         </div>
       </section>
 
-      <section className="adaptive-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 xl:h-[calc(100dvh-5rem)] xl:snap-start lg:px-8">
+      <section className="adaptive-panel home-snap-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 lg:px-8">
         <div className="w-full">
           <FadeIn>
             <SectionHeader
@@ -183,7 +183,7 @@ export default function HomeZhPage() {
         </div>
       </section>
 
-      <section className="adaptive-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 xl:h-[calc(100dvh-5rem)] xl:snap-start lg:px-8">
+      <section className="adaptive-panel home-snap-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 lg:px-8">
         <div className="w-full">
           <FadeIn>
             <SectionHeader
@@ -244,7 +244,7 @@ export default function HomeZhPage() {
         </div>
       </section>
 
-      <section className="adaptive-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 xl:h-[calc(100dvh-5rem)] xl:snap-start lg:px-8">
+      <section className="adaptive-panel home-snap-panel mx-auto flex w-full max-w-6xl items-center px-6 py-12 lg:px-8">
         <div className="w-full">
           <FadeIn>
             <SectionHeader
