@@ -148,7 +148,7 @@ a {
     }
 
     .home-snap-panel {
-      height: calc(100dvh - 5rem);
+      min-height: calc(100dvh - 5rem);
       scroll-snap-align: start;
     }
 
